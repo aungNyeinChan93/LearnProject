@@ -4,6 +4,9 @@
     <Project Path="Learn.D1/Learn.D1.Database/Learn.D1.Database.csproj" />
   </Folder>
   <Folder Name="/Learn.D2/">
+    <File Path="note.txt" />
     <Project Path="Learn.D2/Learn.D2.api/Learn.D2.api.csproj" />
+    <Project Path="Learn.D2/Learn.D2.Database/Learn.D2.Database.csproj" />
+    <Project Path="Learn.D2/Learn.D2.GameStoreDb/Learn.D2.GameStoreDb.csproj" />
   </Folder>
 </Solution>

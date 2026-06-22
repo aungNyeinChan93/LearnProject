@@ -1,0 +1,29 @@
+dotnet ef dbcontext scaffold \
+"Server=.;Database=TestDb;Trusted_Connection=True;TrustServerCertificate=True" \
+Microsoft.EntityFrameworkCore.SqlServer \
+-o Models
+
+dotnet ef dbcontext scaffold \
+"Server=.;Database=TestDb;Trusted_Connection=True;TrustServerCertificate=True" \
+Microsoft.EntityFrameworkCore.SqlServer \
+-o Models \
+--context-dir Data
+
+dotnet ef dbcontext scaffold \
+"" \
+Microsoft.EntityFrameworkCore.SqlServer \
+--context AppDbContext
+
+Scaffold-DbContext `
+"" `
+Microsoft.EntityFrameworkCore.SqlServer `
+-OutputDir Models `
+-ContextDir Data `
+-Context GameStoreDbContext
+
+dotnet ef dbcontext scaffold `
+"" `
+Microsoft.EntityFrameworkCore.SqlServer `
+-o Models `
+-c GameStoreDbContext `
+-f

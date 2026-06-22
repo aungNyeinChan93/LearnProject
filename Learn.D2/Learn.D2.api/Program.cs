@@ -1,28 +1,30 @@
 using Learn.D2.api.Extensions;
 using Learn.D2.api.Features.EmailFeature;
 using Learn.D2.api.Features.FirebaseFeature;
+using Learn.D2.api.Features.GameFeature;
+using Learn.D2.api.Features.UserFeature;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-//All App Settings
 builder.MapSettings();
+builder.MapDatabase();
 
 
 //services
 builder.Services.AddScoped<EmailService>();
 builder.Services.AddScoped<FirebaseService>();
+builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<GameService>();
 
+
+//APP
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();

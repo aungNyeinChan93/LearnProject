@@ -1,0 +1,17 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "Default": "123"
+  },
+  "DbConnectionSettings": {
+    "Default": "Data Source=DESKTOP-8CJL57G\\SQLEXPRESS;Initial Catalog=UserDatabase;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30",
+    "GameStore": "Data Source=DESKTOP-8CJL57G\\SQLEXPRESS;Initial Catalog=GameStore;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30"
+  }
+
+}

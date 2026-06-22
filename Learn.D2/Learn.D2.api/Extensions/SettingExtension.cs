@@ -1,4 +1,5 @@
 ﻿using Learn.D2.api.Models.Settings;
+using Microsoft.Extensions.Options;
 
 namespace Learn.D2.api.Extensions
 {
@@ -9,12 +10,14 @@ namespace Learn.D2.api.Extensions
             builder.Configuration
                 .AddJsonFile("Configuration/firebasesettings.json",optional:true,reloadOnChange:true)
                 .AddJsonFile("Configuration/emailsettings.json",optional:true,reloadOnChange:true)
+                .AddJsonFile("Configuration/dbconnectionsettings.json",optional:true,reloadOnChange:true)
                 .AddJsonFile("Configuration/appsettings.json", optional:true,reloadOnChange:true);
 
             builder.Services.AddOptions();
 
             builder.AddFirebaseSetting()
-                .AddEmailSettings();
+                .AddEmailSettings()
+                .AddDatabaseSettings();
 
             return builder;
         }
@@ -30,6 +33,13 @@ namespace Learn.D2.api.Extensions
         public static WebApplicationBuilder AddEmailSettings(this WebApplicationBuilder builder)
         {
             builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+            return builder;
+        }
+
+        public static WebApplicationBuilder AddDatabaseSettings(this WebApplicationBuilder builder )
+        {
+            builder.Services.Configure<DbConnectionSettings>(
+                builder.Configuration.GetSection("DbConnectionSettings"));
             return builder;
         }
     }
