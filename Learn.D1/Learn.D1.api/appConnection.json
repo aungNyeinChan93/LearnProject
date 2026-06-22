@@ -1,0 +1,6 @@
+{
+  "AppConnection": {
+    "Default": "123",
+    "GameDatabase" : "Game db string"
+  }
+}

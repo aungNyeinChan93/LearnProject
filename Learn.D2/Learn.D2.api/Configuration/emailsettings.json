@@ -1,0 +1,6 @@
+{
+  "EmailSettings": {
+    "Host": "test-host",
+    "Post" : 122
+  }
+}

@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Learn.D1/">
+    <Project Path="Learn.D1/Learn.D1.api/Learn.D1.api.csproj" />
+    <Project Path="Learn.D1/Learn.D1.Database/Learn.D1.Database.csproj" />
+  </Folder>
+  <Folder Name="/Learn.D2/">
+    <Project Path="Learn.D2/Learn.D2.api/Learn.D2.api.csproj" />
+  </Folder>
+</Solution>
