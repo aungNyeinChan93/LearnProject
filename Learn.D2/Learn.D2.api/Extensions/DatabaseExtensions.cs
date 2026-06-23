@@ -26,11 +26,11 @@ namespace Learn.D2.api.Extensions
         }
 
         public static WebApplicationBuilder AddDefaultDatabase(
-            this WebApplicationBuilder builder,IOptions<DbConnectionSettings> o)
+            this WebApplicationBuilder builder,IOptions<DbConnectionSettings> opt)
         {
             builder.Services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlServer(o.Value.Default);
+                options.UseSqlServer(opt.Value.Default);
             });
 
 

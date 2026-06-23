@@ -33,7 +33,7 @@ namespace Learn.D2.api.Extensions
         public static WebApplicationBuilder AddEmailSettings(this WebApplicationBuilder builder)
         {
             builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
-            return builder;
+            return builder; 
         }
 
         public static WebApplicationBuilder AddDatabaseSettings(this WebApplicationBuilder builder )
